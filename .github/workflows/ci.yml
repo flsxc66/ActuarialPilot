@@ -10,6 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      # 任何一个版本失败时，其余版本继续跑完，便于看全信息
+      fail-fast: false
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
 
@@ -40,9 +42,10 @@ jobs:
         run: |
           pytest --cov=actuarial_pilot --cov-report=xml --cov-report=term tests/
 
-      - name: Upload coverage
+      - name: Upload coverage report as artifact
         if: matrix.python-version == '3.11'
-        uses: codecov/codecov-action@v3
+        uses: actions/upload-artifact@v4
         with:
-          file: ./coverage.xml
-          fail_ci_if_error: false
+          name: coverage-report
+          path: coverage.xml
+          retention-days: 14

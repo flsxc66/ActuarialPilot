@@ -24,9 +24,10 @@ classifiers = [
 
 dependencies = [
     # 精算核心
-    "numpy>=1.24",
+    # numpy 上限锁定：<2.5（2.5+ 仅支持 Python 3.12+，且与部分依赖存在兼容问题）
+    "numpy>=1.24,<2.5",
     "scipy>=1.10",
-    "pandas>=2.0",
+    "pandas>=2.0,<3.1",
     # AI / Agent
     "langchain>=0.2.0",
     "langchain-core>=0.2.0",
