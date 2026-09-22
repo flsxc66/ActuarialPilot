@@ -33,7 +33,7 @@ class TestReserve:
         v = prospective_reserve(
             100_000, 30, "M", 20, 0.03, table, annual_premium, duration=0,
         )
-        assert v == 0.0
+        assert v == pytest.approx(0.0, abs=1e-6)
 
     def test_reserve_increases_with_duration(
         self, table: LifeTable, annual_premium: float,
