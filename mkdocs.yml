@@ -1,0 +1,62 @@
+site_name: ActuarialPilot
+site_description: 让精算师用一句话完成定价、敏感性分析与条款问答的开源 AI Agent 工具箱
+site_url: https://flsxc66.github.io/actuarial-pilot/
+repo_url: https://github.com/flsxc66/ActuarialPilot
+repo_name: flsxc66/ActuarialPilot
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到日间模式
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 快速开始: getting_started.md
+  - 架构: architecture.md
+  - 教程:
+      - 定价: tutorials/01_quickstart_pricing.ipynb
+      - 敏感性: tutorials/02_sensitivity_analysis.ipynb
+      - 准备金: tutorials/03_reserve_calculation.ipynb
+      - RAG: tutorials/04_rag_qa.ipynb
+  - API 参考:
+      - core: api/core.md
+      - tools: api/tools.md
+      - agents: api/agents.md
+      - rag: api/rag.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [.]
+          options:
+            docstring_style: google

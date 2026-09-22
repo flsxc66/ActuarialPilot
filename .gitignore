@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual env
+venv/
+env/
+ENV/
+.venv/
+
+# 测试 / 覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# 类型检查
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+
+# 数据 & 向量库
+data/vectorstore/
+data/processed/
+
+# 临时文件
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# mkdocs 站点
+site/
+
+# 演示输出
+demo_output/

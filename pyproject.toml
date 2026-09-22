@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "actuarial-pilot"
+version = "0.1.0"
+description = "让精算师用一句话完成定价、敏感性分析与条款问答的开源 AI Agent 工具箱"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ActuarialPilot Contributors" }]
+keywords = ["actuarial", "insurance", "ai-agent", "langchain", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Office/Business :: Financial",
+]
+
+dependencies = [
+    # 精算核心
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    # AI / Agent
+    "langchain>=0.2.0",
+    "langchain-core>=0.2.0",
+    "langchain-openai>=0.1.0",
+    "langchain-classic>=1.0",
+    "langgraph>=0.1.0",
+    # RAG
+    "chromadb>=0.4.24",
+    "langchain-chroma>=0.1.0",
+    "langchain-community>=0.2",
+    "langchain-text-splitters>=0.2",
+    "pypdf>=3.17",
+    "pdfplumber>=0.10",
+    "tiktoken>=0.5",
+    # Web
+    "streamlit>=1.32",
+    # 工具
+    "python-dotenv>=1.0",
+    "pydantic>=2.5",
+    "matplotlib>=3.7",
+    "openpyxl>=3.1",
+    "tabulate>=0.9",
+    "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.3",
+    "black>=24.0",
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.24",
+    "ipykernel>=6.27",
+]
+local-llm = [
+    "langchain-community>=0.2",
+    "sentence-transformers>=2.6",
+]
+dashscope = [
+    "dashscope>=1.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/flsxc66/ActuarialPilot"
+Documentation = "https://flsxc66.github.io/actuarial-pilot/"
+Repository = "https://github.com/flsxc66/ActuarialPilot"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["actuarial_pilot*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "C4", "RET"]
+ignore = ["E501", "B008"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["."]
