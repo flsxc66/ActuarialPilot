@@ -6,10 +6,11 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-29%20passing-brightgreen.svg)](tests/)
+[![CI](https://github.com/flsxc66/ActuarialPilot/actions/workflows/ci.yml/badge.svg)](https://github.com/flsxc66/ActuarialPilot/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://flsxc66.github.io/ActuarialPilot/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 
-[📖 文档站](https://flsxc66.github.io/actuarial-pilot/) · [🎮 在线 Demo](https://flsxc66-actuarial-pilot.streamlit.app) · [🐛 报告 Bug](https://github.com/flsxc66/ActuarialPilot/issues)
+[📖 文档站](https://flsxc66.github.io/ActuarialPilot/) · [🚀 本地运行](#-30-秒启动) · [🐛 报告 Bug](https://github.com/flsxc66/ActuarialPilot/issues)
 
 </div>
 

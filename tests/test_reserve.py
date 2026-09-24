@@ -33,6 +33,7 @@ class TestReserve:
         v = prospective_reserve(
             100_000, 30, "M", 20, 0.03, table, annual_premium, duration=0,
         )
+        # 精算等价原理：t=0 时 V=0；浮点上用容差断言（不同 Python/numpy 版本存在 ~1e-13 舍入差）
         assert v == pytest.approx(0.0, abs=1e-6)
 
     def test_reserve_increases_with_duration(

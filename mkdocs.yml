@@ -1,6 +1,6 @@
 site_name: ActuarialPilot
 site_description: 让精算师用一句话完成定价、敏感性分析与条款问答的开源 AI Agent 工具箱
-site_url: https://flsxc66.github.io/actuarial-pilot/
+site_url: https://flsxc66.github.io/ActuarialPilot/
 repo_url: https://github.com/flsxc66/ActuarialPilot
 repo_name: flsxc66/ActuarialPilot
 
@@ -40,11 +40,6 @@ nav:
   - 首页: index.md
   - 快速开始: getting_started.md
   - 架构: architecture.md
-  - 教程:
-      - 定价: tutorials/01_quickstart_pricing.ipynb
-      - 敏感性: tutorials/02_sensitivity_analysis.ipynb
-      - 准备金: tutorials/03_reserve_calculation.ipynb
-      - RAG: tutorials/04_rag_qa.ipynb
   - API 参考:
       - core: api/core.md
       - tools: api/tools.md

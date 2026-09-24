@@ -73,7 +73,7 @@ dashscope = [
 
 [project.urls]
 Homepage = "https://github.com/flsxc66/ActuarialPilot"
-Documentation = "https://flsxc66.github.io/actuarial-pilot/"
+Documentation = "https://flsxc66.github.io/ActuarialPilot/"
 Repository = "https://github.com/flsxc66/ActuarialPilot"
 
 [tool.setuptools.packages.find]
